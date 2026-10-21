@@ -29,10 +29,10 @@ public class stepDefinations extends utils{
 	Response response;
 	testDataBuild testdata=new testDataBuild();
 	
-	@Given("Add place payload")
-	public void add_place_payload() throws IOException {
+	@Given("Add place payload with {string} {string} {string}")
+	public void add_place_payload(String name, String language,String address) throws IOException {
 		
-		iniReq= given().spec(requestSpecification()).body(testdata.addPlaceAPIData());
+		iniReq= given().spec(requestSpecification()).body(testdata.addPlaceAPIData(name,language,address));
 		res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 	}
 	

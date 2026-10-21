@@ -8,7 +8,7 @@ import pojo.addPlacePayLoad;
 
 public class testDataBuild {
 	
-	public addPlacePayLoad addPlaceAPIData()
+	public addPlacePayLoad addPlaceAPIData(String name,String language,String address)
 	{
 		 Location l=new Location();
 	        l.setLat(-38.383494);
@@ -20,9 +20,9 @@ public class testDataBuild {
 	        
 		addPlacePayLoad app=new addPlacePayLoad();
 		app.setAccuracy("50");
-		app.setAddress("77, side layout, cdohen 09");
-		app.setLanguage("French-IN");
-		app.setName("Frontline house");
+		app.setAddress(address);
+		app.setLanguage(language);
+		app.setName(name);
 		app.setPhone_number("(+91) 983 893 3937");
 		app.setWebsite("http://google.com");
 		app.setLocation(l);
